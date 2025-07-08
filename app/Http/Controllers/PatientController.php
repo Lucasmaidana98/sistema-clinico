@@ -15,10 +15,10 @@ class PatientController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('permission:view patients')->only(['index', 'show']);
-        $this->middleware('permission:create patients')->only(['create', 'store']);
-        $this->middleware('permission:update patients')->only(['edit', 'update']);
-        $this->middleware('permission:delete patients')->only(['destroy']);
+        $this->middleware('permission:patients.view')->only(['index', 'show']);
+        $this->middleware('permission:patients.create')->only(['create', 'store']);
+        $this->middleware('permission:patients.update')->only(['edit', 'update']);
+        $this->middleware('permission:patients.delete')->only(['destroy']);
     }
 
     /**

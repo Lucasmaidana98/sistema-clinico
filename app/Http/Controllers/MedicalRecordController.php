@@ -18,10 +18,10 @@ class MedicalRecordController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('permission:view medical records')->only(['index', 'show']);
-        $this->middleware('permission:create medical records')->only(['create', 'store']);
-        $this->middleware('permission:update medical records')->only(['edit', 'update']);
-        $this->middleware('permission:delete medical records')->only(['destroy']);
+        $this->middleware('permission:medical-records.view')->only(['index', 'show']);
+        $this->middleware('permission:medical-records.create')->only(['create', 'store']);
+        $this->middleware('permission:medical-records.update')->only(['edit', 'update']);
+        $this->middleware('permission:medical-records.delete')->only(['destroy']);
     }
 
     /**

@@ -17,10 +17,10 @@ class AppointmentController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('permission:view appointments')->only(['index', 'show']);
-        $this->middleware('permission:create appointments')->only(['create', 'store']);
-        $this->middleware('permission:update appointments')->only(['edit', 'update']);
-        $this->middleware('permission:delete appointments')->only(['destroy']);
+        $this->middleware('permission:appointments.view')->only(['index', 'show']);
+        $this->middleware('permission:appointments.create')->only(['create', 'store']);
+        $this->middleware('permission:appointments.update')->only(['edit', 'update']);
+        $this->middleware('permission:appointments.delete')->only(['destroy']);
     }
 
     /**

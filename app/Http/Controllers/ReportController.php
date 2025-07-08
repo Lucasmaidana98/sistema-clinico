@@ -15,7 +15,7 @@ class ReportController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('permission:view reports');
+        $this->middleware('permission:reports.view');
     }
 
     public function index()
